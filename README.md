@@ -1,4 +1,4 @@
-# fumOS
+# FumOS
 Touhou plush and Disk Operating System
 
 ## About
