@@ -1,12 +1,10 @@
-﻿using FumOS.Apps.Piano;
-using System;
+﻿using System;
 using Sys = Cosmos.System;
 
 namespace FumOS
 {
     public class Kernel : Sys.Kernel
     {
-
         protected override void BeforeRun()
         {
             Console.Clear();
@@ -16,8 +14,7 @@ namespace FumOS
 
         protected override void Run()
         {
-            new Piano();
-            Console.ReadLine();
+            new Shell();
         }
     }
 }

@@ -11,8 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FumOS.Apps", "FumOS.Apps\FumOS.Apps.csproj", "{C4DBB66E-312B-4337-9354-F55A81ABD1CC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{803E80BE-F892-4223-89F4-6BD2182E8037}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{803E80BE-F892-4223-89F4-6BD2182E8037}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{803E80BE-F892-4223-89F4-6BD2182E8037}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4DBB66E-312B-4337-9354-F55A81ABD1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4DBB66E-312B-4337-9354-F55A81ABD1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4DBB66E-312B-4337-9354-F55A81ABD1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4DBB66E-312B-4337-9354-F55A81ABD1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

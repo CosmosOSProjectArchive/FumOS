@@ -125,8 +125,4 @@
         <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\FumOS.Apps\FumOS.Apps.csproj" />
-    </ItemGroup>
-
 </Project>

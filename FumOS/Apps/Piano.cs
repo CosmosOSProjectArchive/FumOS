@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FumOS.Apps.Piano
+namespace FumOS.Apps
 {
     public class Piano
     {
@@ -159,6 +159,7 @@ namespace FumOS.Apps.Piano
 
                     // Escape
                     case ConsoleKey.Escape:
+                        Console.WriteLine("");
                         exit = true;
                         break;
 
