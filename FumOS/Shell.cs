@@ -1,7 +1,7 @@
 ﻿using Cosmos.Core;
 using FumOS.Apps;
+using FumOS.Commands;
 using System;
-using System.Linq;
 
 namespace FumOS
 {
@@ -29,21 +29,31 @@ namespace FumOS
 
                 switch (command)
                 {
+                    // Commands
+
                     case "clear":
-                        Console.Clear();
+                        _kernel.Execute(new Clear());
                         break;
+
+                    case "exit":
+                        _kernel.Execute(new Exit());
+                        break;
+
+                    case "echo":
+                        _kernel.Execute(new Echo(args));
+                        break;
+
+                    case "error":
+                        _kernel.Execute(new Error(args));
+                        break;
+
+                    // Apps
 
                     case "piano":
-                        new Piano().Start();
-                        break;
+                        _kernel.Execute(new Piano());
+                        break;                 
 
-                    case "echo": 
-                        Console.WriteLine(string.Join(" ", args));
-                        break;
-
-                    case "shutdown":
-                        ACPI.Shutdown();
-                        break;
+                    // Default action
 
                     default:
                         Console.WriteLine("unknown command");

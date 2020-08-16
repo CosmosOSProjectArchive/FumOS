@@ -24,5 +24,20 @@ namespace FumOS
         {
             new Shell(this);
         }
+
+        public void Execute(IExecutable command)
+        {
+            try
+            {
+                command.Execute();
+            }
+            catch (Exception e)
+            {
+                var previousColor = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\n Error: {e.Message}\n");
+                Console.ForegroundColor = previousColor;
+            }
+        }
     }
 }

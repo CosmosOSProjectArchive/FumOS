@@ -2,13 +2,17 @@
 
 namespace FumOS.Apps
 {
-    public class Piano
+    public class Piano : IExecutable
     {
         private bool exit;
 
-        public void Start()
+        public Piano()
         {
             exit = false;
+        }
+
+        public void Execute()
+        {
 
             while (!exit)
             {
