@@ -1,6 +1,7 @@
 ﻿using Cosmos.Core;
 using FumOS.Apps;
 using System;
+using System.Linq;
 
 namespace FumOS
 {
@@ -19,7 +20,12 @@ namespace FumOS
             while (true)
             {
                 Console.Write("fumos> ");
-                var command = Console.ReadLine();
+
+                var input = Console.ReadLine().Split(" ");
+
+                var command = input[0];
+                string[] args = new string[input.Length - 1];
+                Array.Copy(input, 1, args, 0, args.Length);
 
                 switch (command)
                 {
@@ -28,7 +34,11 @@ namespace FumOS
                         break;
 
                     case "piano":
-                        new Piano();
+                        new Piano().Start();
+                        break;
+
+                    case "echo": 
+                        Console.WriteLine(string.Join(" ", args));
                         break;
 
                     case "shutdown":

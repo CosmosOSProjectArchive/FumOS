@@ -6,14 +6,10 @@ namespace FumOS.Apps
     {
         private bool exit;
 
-        public Piano()
+        public void Start()
         {
             exit = false;
-            Start();
-        }
 
-        private void Start()
-        {
             while (!exit)
             {
                 switch (Console.ReadKey().Key)
