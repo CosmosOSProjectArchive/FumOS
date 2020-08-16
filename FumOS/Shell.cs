@@ -1,12 +1,16 @@
-﻿using FumOS.Apps;
+﻿using Cosmos.Core;
+using FumOS.Apps;
 using System;
 
 namespace FumOS
 {
     public class Shell
     {
-        public Shell()
+        private readonly Kernel _kernel;
+
+        public Shell(Kernel kernel)
         {
+            _kernel = kernel;
             Start();
         }
 
@@ -19,16 +23,16 @@ namespace FumOS
 
                 switch (command)
                 {
+                    case "clear":
+                        Console.Clear();
+                        break;
+
                     case "piano":
                         new Piano();
                         break;
 
                     case "shutdown":
-                        Power.Shutdown();
-                        break;
-
-                    case "reboot":
-                        Power.Reboot();
+                        ACPI.Shutdown();
                         break;
 
                     default:
